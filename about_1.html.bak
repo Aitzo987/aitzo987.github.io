@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>LaMutilhuerta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="icon" type="image/ico" href="Images/logo.ico" sizes="192x192">
+    <!--Para que aparezca el logo de la mutilhuerta en la pestaña del buscador-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Para el pie de página-->
+    <!-- Establezco el estilo, mediante clases-->
+    <style> 
+  body, html {
+    height: 75%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+  }
+  .w3-row-padding img {margin-bottom: 12px}
+  
+  
+  .menu {
+    display: none;
+  }
+
+ h1 {
+  background-color: white; 
+  color: black; 
+  padding: 10px; 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  font-size: small;
+  text-align: justify} /*Indico el color, la fuente y que el texto esté centrado*/
+  </style>
+  </head>
+  <body>
+    <div class="w3-row w3-padding w3-black">
+      <div class="bgimg"></div> <!--llamar a la imagen-->
+      <div class="w3-top"></div>
+         <div class="w3-col s3" style="text-align: center;"><a href="index.html"</a> <img src="Images/Botton_hOME.jpg"
+             style="width: 168px; height: 44px;"> </div>
+         <div class="w3-col s3"> <a href="about_1.html" class="w3-button w3-block w3-black">QUIENES
+             SOMOS</a> </div>
+         <div class="w3-col s3"> <a href="products_2.html" class="w3-button w3-block w3-black">PRODUCTOS</a>
+         </div>
+         <div class="w3-col s3"> <a href="contacts_3.html" class="w3-button w3-block w3-black">CONTACTO</a>
+         </div>
+       </div>
+       <div style="margin-left: 320px;"><br>
+       </div>
+     </div>
+    <!-- insertar vídeo -->
+    <div style="text-align: center;"> <video src="Images/Productos/IMG_1569.MP4"
+
+        preload="none" controls="controls" autoplay="autoplay" loop="loop" width="752"></video></div>
+    <!-- Container donde se explica quienes somos-->
+    <p> </p>
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64" style="text-align: center;"><span class="w3-tag w3-wide">QUIENES
+          SOMOS </span></h5>
+      <p></p>
+      <!-- Para insertar el video de la portada -->&nbsp;
+      <h1 style="text-align: justify;">La Mutilhuerta es un proyecto ambicioso
+        que nace en el año 2019. Aitor y Eider deciden construir un huerto
+        urbano en el jardín de su vivienda en Mutilva, con el objetivo principal
+        de aprender a cultivar y seguir la evolución del mismo durante los meses
+        de verano en redes sociales. En la Mutilhuerta se cultivaron un total de
+        20 productos, y el desarrollo de los mismos se complemento con
+        diferentes tutoriales, como la explicación de como autopolinizar la
+        planta de calabaza para hacer frente a la falta de polinizadores, o la
+        poda de diferentes plantas. También se realizaron sorteos de productos
+        de la Mutilhuerta entre nuestros seguidores, a la vez que se han
+        compartido recetas caseras para hacer nuestro propia salsa de tomate
+        natural, o crema de marihuana, también cosechada en el huerto. Hoy en
+        día, Eider se encuentra en Ecuador realizando unas prácticas con las
+        comunidades que viven en la selva. Durante la época de invierno ha
+        compartido vivencias y curiosidades de carácter ambiental y ecológico
+        desde allí; por ejemplo, hace escasamente 1 semana ha compartido como
+        cultivar y hacer chocolate artesanal. De ese modo, lo que en un
+        principio era un proyecto meramente hortelano, a acabado siendo un
+        proyecto más ambicioso, abarcando otras disciplinas como el medio
+        ambiente. </h1>
+    </div>
+ 
+
+    <!-- insertar vídeo CHOCOLATE -->
+    <!-- Container donde se explica quienes somos-->
+    <p> </p>
+    <div class="w3-content" style="max-width:700px">
+    <h1>A continuación, la elaboración de chocolate artesanal desde Ecuador</h1>
+     <div style="text-align: justify;"> <video src="Images/Productos/Chocolate_casero.MP4"
+      preload="none" style="text-align:center" controls="controls" autoplay="autoplay" poster="Images/Captura_chocolate.JPG" loop="loop" width="360"></video></div>    
+  </body>
+</html>
