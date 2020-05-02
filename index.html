@@ -1,71 +1,65 @@
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>LaMutilhuerta</title>
+<html> <!--Abro el texto HTML-->
+  <head> <!-- Abro la cabecera del documento -->
+   
+    <!--La plantilla proporciona metadatos sobre el documento HTML-->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!--Defino el título de la pestaña del navegador-->
+    <title>LaMutilhuerta</title> 
+    
+    <!--Enlaces a archivos CSS, definidos por la plantilla-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  
+    <!--Enlace que he creado para visualizar en la pestaña del buscador el logo de la Mutilhuerta-->
     <link rel="icon" type="image/ico" href="Images/logo.ico" sizes="192x192">
-    <!--Para que aparezca el logo de la mutilhuerta en la pestaña del buscador-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--Para el pie de página-->
-    <link rel="StyleSheet" href="archivo_estilos.css" type="text/css">
+   
     <!-- Establezco el estilo, mediante clases-->
-    <style> 
+    <style type="text/CSS" title="estilos personales">
+    
     
     body, html {
-      height: 100%;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
-    }
-    .w3-row-padding img {margin-bottom: 2px}
+      height:100%; /* Designamos la altura del espacio donde vamos a colocar la imagen de la portada */
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;} /*Estilo de letra utilizado*/
+    
+    /* Defino la clase "bgimg" */
     .bgimg {
-      background-position: center;
-      background-size: cover;
-      background-image:url("Images/quepeso.jpg"); 
-      min-height: 250%;
+      background-position: center; /*Que su posición sea centrada*/
+      background-size: cover; /*Escalo la imagen al mayor tamaño posible sin estirarla*/
+      background-image:url("Images/quepeso.jpg"); /*Especifico la url a la imagen*/
+      min-height: 250%; /*Defino la altura mínima de la imagen*/
     }
-   
-    .menu {
-      display: none;
-    }
-    h2 {
-     background-color: white; 
-     color: black; 
-     padding: 10px; 
-     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-     font-size: small;
-     text-align: justify} /*Indico el color, la fuente y que el texto esté centrado*/
+   /* Defino la clase "h1" */
+    .h2 {
+     background-color:white; /*Color blanco de fondo*/
+     color: black; /*Color de la letra, negro */
+     padding: 10px; /*Establezco 10 píxeles de relleno para los cuatro lados del elemento */
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /*Tipo de letra*/
+     font-size: small; /*Determino que el tamaño de la fuente sea pequeño */
+     text-align: justify} /*Indico que el texto tenga los bordes justificados*/
 
-    </style>
-  </head>
-  <body>
-    <!-- Links para la cabecera -->
-    <div class="w3-row w3-padding w3-black">
-      <div class="w3-top"></div>
-         <div class="w3-col s3" style="text-align: center;"><a href="index.html"</a> <img src="Images/Botton_hOME.jpg"
-             style="width: 168px; height: 44px;"> </div>
-         <div class="w3-col s3"> <a href="about_1.html" class="w3-button w3-block w3-black">QUIENES
-             SOMOS</a> </div>
-         <div class="w3-col s3"> <a href="products_2.html" class="w3-button w3-block w3-black">PRODUCTOS</a>
-         </div>
-         <div class="w3-col s3"> <a href="contacts_3.html" class="w3-button w3-block w3-black">CONTACTO</a>
-         </div>
-       </div>
-       <div style="margin-left: 320px;"><br>
-       </div>
-     </div>
+    </style> <!--Cierro el estilo-->
+  </head> <!--Cierro la cabecera del documento-->
+  <body> <!--Abro el cuerpo, que contiene todos los elementos del HTML-->
+    <!-- Links para la cabecera de la página web -->
+    <div class="w3-row w3-padding w3-black"> <!-- Esta clase define el polígono negro del menú -->
+      <div class="w3-col s3" style="text-align: center;"><a href="index.html"</a> <img src="Images/Botton_hOME.jpg"style="width: 168px; height: 44px;"> </div> <!-- Inserto la imágen del texto de la mutilhuerta y creo un enlace a la página principal, que nos redirija al index.html -->
+      <div class="w3-col s3"> <a href="about_1.html" class="w3-button w3-block w3-black">QUIENES SOMOS</a> </div> <!-- El botón de quienes somos con el enlace al html about_1.html -->
+      <div class="w3-col s3"> <a href="products_2.html" class="w3-button w3-block w3-black">PRODUCTOS</a></div> <!-- El botón de productos con el enlace al html products_2.html -->
+      <div class="w3-col s3"> <a href="contacts_3.html" class="w3-button w3-block w3-black">CONTACTO</a></div> <!-- El botón de contacto, con el enlace al html products_2.html -->
+       </div> <!-- Sirven para crear secciones o agrupar contenidos -->
+       <div style="margin-left: 320px;"><br> <!--Establezco un margen de 320 píxeles, para que la imágen y cabecera no se superpongan -->
+    </div> 
 
-    <!-- Para insertar la imagen de la portada -->
+    <!-- Para insertar la imagen y el título de la portada -->
     <header class="bgimg w3-display-container w3-grayscale-min" id="home" style="margin-top: -23px;">
       <div class="w3-display-middle w3-center" style="top: 429px; height: 762px; left: 737px; width: 706px; text-align: center;">
-        <h1><span style="font-family: Victoria;color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-
-              class="h1" style="font-size:180px"></span></span></h1>
         <h1><br>
         </h1>
         <h1><br>
         </h1>
-        <h1><br>
+        <h1><br>  <!--Debido a que quería situar el título en una posición determinada, utilicé BlueGriffon, y me creó estos espaciados feos; pero bueno, he conseguido colocar el texto donde quería-->
         </h1>
         <h1><br>
         </h1>
@@ -81,55 +75,58 @@
         </p>
         <p><br>
         </p>
-        <h1><span style="font-family: Victoria;color: white"><span class="h1" style="font-size:180px">&nbsp;LaMutilHuerta</span></span><b
-
-            style="font-family: Victoria;"><span class="h1" style="font-size:200px"><br>
-            </span></b> </h1>
+        <h1><span style="font-family: Victoria;color: white"><span class="h1" style="font-size:180px">&nbsp;LaMutilHuerta</span></span><b<br> </h1> <!--Estilo de la fuente-->
       </div>
-    </header>
-    <!-- CUENTA ATRÁS PARA LA MUTILHUERTA 2.0--> <br>
-    <br>
-    <br>
-    <center><span style="color: #269a17;"><span class="h2"><b>LA</b> <b>MUTILHUERTA
+    </header> <!--El encabezamiento acaba aquí-->
+    <br> <!--Salto de línea-->
+    <br><!--Salto de línea-->
+    
+    <!-- CUENTA ATRÁS PARA LA MUTILHUERTA 2.0--> 
+    
+    
+    <center><span style="color: black;"><span class="h2"><b>LA</b> <b>MUTILHUERTA <!--Color verde y estilo de la clase h2-->
             2.0</b></span></span></center>
-    <center><span style="color: #269a17;">
+    <center><span style="color: black;"></span><!--Color verde y estilo de la clase h2-->
+    
+      <!--Lenguaje Java para la elaboración de la cuenta atrás-->
+      <!--En primer lugar defino la apariencia del elemento-->
+        
         <script language="JavaScript" type="text/javascript">
-
+      
       //<![CDATA[
       
       TargetDate = "06/30/2020 09:10 PM";
       
-      BackColor = "white";
+      BackColor = "white"; /*Color del fondo, blanco*/
       
-      ForeColor =  "black";
+      ForeColor =  "black";/*Color de la letra, negro*/
       
-      CountActive = true;
+      CountActive = true; /*Activar la cuenta atrás*/
       
-      CountStepper = -1;
+      CountStepper = -1;/*Que se produzca de uno en un segundo*/
       
-      LeadingZero = true;
+      LeadingZero = true;/*El cero a la izquierda*/
       
-      DisplayFormat = "%%D%% Días, %%H%% Horas, %%M%% Minutos, %%S%% Segundos.";
-      
-      FinishMessage = "¡Os esperámos!";
+      DisplayFormat = "%%D%% Días, %%H%% Horas, %%M%% Minutos, %%S%% Segundos.";/*Establezco el formato de la cuenta atrás*/
       
       //]]>
-      
-      
-      </script>
-        <script language="JavaScript" src="https://scripts.hashemian.com/js/countdown.js"
 
-type="text/javascript">
+      </script> <!--Cierro el script-->
+
+    <!--Fuente de donde se encuentra el script utilizado para la cuenta atrás-->
+
+       <script language="JavaScript" src="https://scripts.hashemian.com/js/countdown.js"
+          type="text/javascript">
+       </script></span> <!--span sirve para aplicar estilo al texto-->
       
-      </script></span></center>
-    <center><span style="color: #269a17;"><b><span class="h2">¡OS ESPERÁMOS!</span></b></span></center>
-    <!-- Instagram y twitter (redes sociales) --> <br>
-    <br>
+    
+    <!-- Instagram (redes sociales) --> 
+    <br> <!--Salto de línea-->
     <footer class="w3-container w3-padding-64 w3-white w3-center w3-large" style="margin-top: -14px;">
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <p>Descúbrenos <a href="https://www.instagram.com/lamutilhuerta/?hl=es" target="_blank"
 
-          class="w3-hover-text-green">AQUÍ</a></p>
-      <img src="Images/logo.ico" style="width: 116px; height: 116px;"> </footer>
-  </body>
-</html>
+    <!--Inserto el enlace del instagram de La Mutilhuerta-->
+      <p>Descúbrenos <a href="https://www.instagram.com/lamutilhuerta/?hl=es" target="_blank"
+         class="w3-hover-text-green">AQUÍ</a></p> <!--Lograr un sombreado verde cuando situas el ratón encima del enlace-->
+      <img src="Images/logo.ico" style="width: 116px; height: 116px;"> </footer> <!--Inserto el logo de la Mutilhuerta-->
+  </body> <!--El cuerpo del documento termina aquí-->
+</html> <!--El html termina aquí-->

@@ -1,47 +1,51 @@
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>LaMutilhuerta</title>
+<html> <!--Abro el texto HTML-->
+  <head> <!-- Abro la cabecera del documento -->
+   
+    <!--La plantilla proporciona metadatos sobre el documento HTML-->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="icon" type="image/ico" href="Images/logo.ico" sizes="192x192">
-    <!--Para que aparezca el logo de la mutilhuerta en la pestaña del buscador-->
-    <!-- Establezco el estilo, mediante clases-->
-    <style> 
-    body, html { 
-      height: 100%;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
-    }
+
+    <!--Defino el título de la pestaña del navegador-->
+    <title>LaMutilhuerta</title> 
     
+    <!--Enlaces a archivos CSS, definidos por la plantilla-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  
+    <!--Enlace que he creado para visualizar en la pestaña del buscador el logo de la Mutilhuerta-->
+    <link rel="icon" type="image/ico" href="Images/logo.ico" sizes="192x192">
+   
+    <!-- Establezco el estilo, mediante clases-->
+    <style type="text/CSS" title="estilos personales">
+    body, html {
+      height: 75%; /* Designamos la altura del espacio donde vamos a colocar la imagen de la portada */
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;}/*Estilo de letra utilizado*/
+    .menu {
+      display: none;}
+
     h1 {
-     background-color: white; 
-     color: black; 
-     padding: 20px; 
-     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-     font-size: small;
-     text-align: justify} /*Indico el color, la fuente y que el texto esté centrado*/
-    </style>
-  </head>
-  <body>
-    <!-- Links para la cabecera -->
-    <div class="w3-row w3-padding w3-black">
-      <div class="w3-top"></div>
-         <div class="w3-col s3" style="text-align: center;"><a href="index.html"</a> <img src="Images/Botton_hOME.jpg"
-             style="width: 168px; height: 44px;"> </div>
-         <div class="w3-col s3"> <a href="about_1.html" class="w3-button w3-block w3-black">QUIENES
-             SOMOS</a> </div>
-         <div class="w3-col s3"> <a href="products_2.html" class="w3-button w3-block w3-black">PRODUCTOS</a>
-         </div>
-         <div class="w3-col s3"> <a href="contacts_3.html" class="w3-button w3-block w3-black">CONTACTO</a>
-         </div>
-       </div>
-       <div style="margin-left: 320px;"><br>
-       </div>
-     </div>
+     background-color: white; /*Color blanco de fondo*/
+     color: black; /*Color de la letra, negro */
+     padding: 10px; /*Establezco 10 píxeles de relleno para los cuatro lados del elemento */
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /*Tipo de letra*/
+     font-size: small;/*Determino que el tamaño de la fuente sea pequeño */
+     text-align: justify} /*Indico que el texto tenga los bordes justificados*/
+  </style> <!--Cierro el estilo-->
+  </head> <!--Cierro la cabecera-->
+  <body> <!--Abro el cuerpo, que contiene todos los elementos del HTML-->
+  
+      <div class="w3-row w3-padding w3-black"> <!-- Esta clase define el polígono negro del menú -->
+        <div class="w3-col s3" style="text-align: center;"><a href="index.html"</a> <img src="Images/Botton_hOME.jpg"style="width: 168px; height: 44px;"> </div> <!-- Inserto la imágen del texto de la mutilhuerta y creo un enlace a la página principal, que nos redirija al index.html -->
+        <div class="w3-col s3"> <a href="about_1.html" class="w3-button w3-block w3-black">QUIENES SOMOS</a> </div> <!-- El botón de quienes somos con el enlace al html about_1.html -->
+        <div class="w3-col s3"> <a href="products_2.html" class="w3-button w3-block w3-black">PRODUCTOS</a></div> <!-- El botón de productos con el enlace al html products_2.html -->
+        <div class="w3-col s3"> <a href="contacts_3.html" class="w3-button w3-block w3-black">CONTACTO</a></div> <!-- El botón de contacto, con el enlace al html products_2.html -->
+         </div> <!-- Sirven para crear secciones o agrupar contenidos -->
+         <div style="margin-left: 320px;"><br> <!--Establezco un margen de 320 píxeles, para que la imágen y cabecera no se superpongan -->
+      </div> 
    
     <!-- CONTENEDOR DE GALERIA -->
-    <div class="w3-content" style="max-width:700px">
-      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">GALERÍA</span></h5>
+    <div class="w3-content" style="max-width:700px"> <!--Máxima anchura del contenedor-->
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">GALERÍA</span></h5> 
        <!-- Container donde se explica quienes somos-->
        <h1>En la Mutilhuerta plantamos una gran variedad de hortalizas y frutas,
         entre ellas: Lechugas, acelgas, borraja, berenjena, pochas, puerros,
@@ -70,39 +74,46 @@
       <div class="w3-content" style="max-width:700px">
         <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ELABORACIONES
             LAMUTILHUERTA</span></h5>
-        <!-- insertar vídeo TOMATE LAMUTILHUERTA -->
+
+      <!-- Insertar vídeo TOMATE LAMUTILHUERTA -->
         <h1>En el siguiente video explicamos como embotar tu propio tomate frito
           casero.</h1>
-        <div style="text-align: center;"> <video src="Images/tomate.MP4" preload="none"
+        <div style="text-align: center;"> <video src="Images/tomate.MP4" 
+          preload="none"
+          controls="controls" 
+          poster="Images/Captura_tomte.JPG" 
+          autoplay="autoplay"
+          loop="loop" 
+          height="500" 
+          width="360"></video></div>
 
-            controls="controls" poster="Images/Captura_tomte.JPG" autoplay="autoplay"
-
-            loop="loop" height="500" width="360"></video></div>
-        <!-- insertar vídeo MARITZUCREAM-->
+        <!-- Insertar vídeo MARITZUCREAM-->
         <h1>Y ahora... el producto estrella de la Mutilhuerta: MaritzuCream!<br>
           Explicamos paso a paso como elaborar crema de marihuana. Maritzucream
           tiene propiedades medicinales, analgésicas y antiinflamatorias. Es
           ideal para combatir los dolores de huesos y traumatismos, además de
           artitris, artrosis, dermatitis y acné.</h1>
+        
         <div style="text-align: center;"> <video src="Images/Maritxu_cream.mov"
+         preload="none" 
+         controls="controls" 
+         poster="Images/portada_maritzucream.JPG" 
+         loop="loop" 
+         height="500" 
+         width="360"></video></div>
 
-            preload="none" controls="controls" poster="Images/portada_maritzucream.JPG"
-
-            loop="loop" height="500" width="360"></video></div>
+        <!--Texto para presentar la receta de MaritzuCream-->
         <h1>Os dejamos la receta ilustrada para que, ¡la guardéis o peguéis en
-          la nevera! Ánimo:)<br>
-          <a href="/Images/RECETA1.JPG" download="descargar receta"> Descargar
-            receta <br>
+          la nevera! Ánimo:) <br>
+        <a href="/Images/RECETA1.JPG" download="descargar receta">Descargar receta<br> <!--Enlace para la descarga de la receta-->
           </a></h1>
+          
         <!-- LA RECETA ILUSTRADA -->
         <div class="w3-row" style="margin-bottom:128px">
           <div class="w3-half">
-            <img src="Images/RECETA2.JPG" style="width:100%">
-
-          </div>
+            <img src="Images/RECETA2.JPG" style="width:100%"> </div>
           <div class="w3-half">
             <img src="Images/RECETA1.JPG" style="width:100%">
-        <div class="w3-row style=" margin-bottom:128px="">
-</div>
+        </div>
   </div>
-</html>
+</html> <!--Aquí acaba el documento HTML-->
