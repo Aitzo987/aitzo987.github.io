@@ -40,9 +40,7 @@
     <!--Cierro el estilo-->
   </head> <!--Cierro la cabecera del documento--> 
   <body> <!--Abro el cuerpo, que contiene todos los elementos del HTML-->
-  
-    <!-- Links para la cabecera de la página web -->
-  
+    
     <div class="w3-row w3-padding w3-black"> <!-- Esta clase define el polígono negro del menú -->
       <div class="w3-col s3" style="text-align: center;"><a href="index.html"</a> <img src="Images/Botton_hOME.jpg"style="width: 168px; height: 44px;"> </div> <!-- Inserto la imágen del texto de la mutilhuerta y creo un enlace a la página principal, que nos redirija al index.html -->
       <div class="w3-col s3"> <a href="about_1.html" class="w3-button w3-block w3-black">QUIENES SOMOS</a> </div> <!-- El botón de quienes somos con el enlace al html about_1.html -->
@@ -75,10 +73,9 @@
         </h1>
         <h1><br>
         </h1>
-        <h1><span style="color: white;"><span style="font-family: Victoria;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </span></span><span style="font-family: Victoria;color: white"><span
+        <h1><span style="color: white;"><span style="font-family: Victoria;">&nbsp;</span></span><span
 
-              class="h1" style="font-size:180px">LaMutilHuerta</span></span><b<br>
+            style="font-family: Victoria;color: white"><span class="h1" style="font-size:180px">LaMutilHuerta</span></span><b<br>
           </b<br>
           <!--Estilo de la fuente--> </h1>
       </div>
