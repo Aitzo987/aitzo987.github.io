@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html> <!--Abro el texto HTML-->
+<head><!-- Abro la cabecera ddocumento -->
+<title>MAPA WEB</title>
+   <meta charset="utf-8" />
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+<!--Enlaces a archivos CSS, definidos por la plantilla-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<!--Enlace que he creado para visualizar en la pestaña del buscador el logo de la Mutilhuerta-->
+    <link rel="icon" type="image/ico" href="Images/logo.ico" sizes="192x192">
+<!-- enlace a código CSS de Leaflet en la cabecera -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.0/dist/leaflet.css"
+     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+     crossorigin=""/>
+<!-- enlace a JavaScript de Leaflet justo tras CSS -->
+    <script src="https://unpkg.com/leaflet@1.5.0/dist/leaflet.js"
+    integrity="sha512-3Wcxp7F9bV2pl+MBgrL6Pz7AJASLpemmQPIiPA0lDs3ImF0z4JuuMIBPeirLbgIuhfH2gJyGWZjvm6M+Zr7L6Q=="
+    crossorigin=""></script>
+
+<!-- he descargado el archivo .css y he indicado la ruta relativa. He abierto el link de la presentacion y he guardado la pagina en la carpeta que tengo como directorio  -->
+    <link rel="stylesheet" href="css/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+<!-- he descargado el archivo .js y he indicado la ruta relativa -->
+    <script src="js/leaflet.js"
+    integrity="sha512-3Wcxp7F9bV2pl+MBgrL6Pz7AJASLpemmQPIiPA0lDs3ImF0z4JuuMIBPeirLbgIuhfH2gJyGWZjvm6M+Zr7L6Q=="
+    crossorigin=""></script>
+<!-- Establezco el estilo, mediante clases-->
+    <style type="text/CSS" title="estilos personales">
+    
+    body, html {
+      height:100%; /* Designamos la altura del espacio donde vamos a colocar la imagen de la portada */
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;} /*Estilo de letra utilizado*/
+    
+    /* Defino la clase "bgimg" */
+    .bgimg {
+      background-position: center; /*Que su posición sea centrada*/
+      background-size: cover; /*Escalo la imagen al mayor tamaño posible sin estirarla*/
+      background-image:url("Images/quepeso.jpg"); /*Especifico la url a la imagen*/
+      min-height: 250%; /*Defino la altura mínima de la imagen*/
+    }
+   /* Defino la clase "h1" */
+    h1 {
+     background-color:white; /*Color blanco de fondo*/
+     color: black; /*Color de la letra, negro */
+     padding: 10px; /*Establezco 10 píxeles de relleno para los cuatro lados del elemento */
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /*Tipo de letra*/
+     font-size: small; /*Determino que el tamaño de la fuente sea pequeño */
+     text-align: justify} /*Indico que el texto tenga los bordes justificados*/
+
+    </style>
+    <!--Cierro el estilo-->
+  </head> <!--Cierro la cabecera del documento--> 
+  <body> <!--Abro el cuerpo, que contiene todos los elementos del HTML-->
+  
+    <!-- Links para la cabecera de la página web -->
+  
+    <div class="w3-row w3-padding w3-black"> <!-- Esta clase define el polígono negro del menú -->
+      <div class="w3-col s3" style="text-align: center;"><a href="index.html"</a> <img src="Images/Botton_hOME.jpg"style="width: 168px; height: 44px;"> </div> <!-- Inserto la imágen del texto de la mutilhuerta y creo un enlace a la página principal, que nos redirija al index.html -->
+      <div class="w3-col s3"> <a href="about_1.html" class="w3-button w3-block w3-black">QUIENES SOMOS</a> </div> <!-- El botón de quienes somos con el enlace al html about_1.html -->
+      <div class="w3-col s3"> <a href="products_2.html" class="w3-button w3-block w3-black">PRODUCTOS</a></div> <!-- El botón de productos con el enlace al html products_2.html -->
+      <div class="w3-col s3"> <a href="contacts_3.html" class="w3-button w3-block w3-black">CONTACTO</a></div> <!-- El botón de contacto, con el enlace al html products_2.html -->
+       </div> <!-- Sirven para crear secciones o agrupar contenidos -->
+       <div style="margin-left: 320px;"><br> <!--Establezco un margen de 320 píxeles, para que la imágen y cabecera no se superpongan -->
+    </div> 
+
+<body>
+ 
+
+   <!-- Container donde se explica quienes somos-->
+   <div class="w3-container" id="CONTACTO">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">CONTACTO </span></h5>
+      
+      <h1> Email: lamutilhuerta@gmail.com <br> Telefono: 610098925 <br> Instagram: @lamutilhuerta</h1><!--titulo con el estilo de h1-->
+       
+ <!-- bloque dónde aparecerá el mapa, así como el estilo del mapa -->
+<div class=mapa id="bloque_mapa" style="width: 600px; height: 600px;"></div>
+
+<script> // a partir de ahora se emplea lenguaje de Javascript
+// defino el mapa como una varianble y ajusto dónde quiero que aparezca
+    var mi_mapa = L.map('bloque_mapa').setView([42.81, -1.64], 5); // L.map es la función que permite crear y manipular el mapa. Set view: coordenadas de mi mapa y nivel de zoom.
+
+// A continuación añado un mapa base. Crear un tile layer lleva implícito establecer la URL, el texto con la atribución y el máximo nivel de zoom de la capa
+
+    var stamen_tms = L.tileLayer( // defino una variable
+'http://a.tile.stamen.com/terrain/{z}/{x}/{y}.png', { // URL con tiles
+// texto de atribución - IMPORTANTE
+attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>,<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash;Map data: &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+maxZoom: 20  // zoom máximo
+});
+stamen_tms.addTo(mi_mapa);
+
+  // Añado otro mapa base. Añado TM de OpenStreetMap render Mapnik
+var OSM =    L.tileLayer(
+// dirección de las tiles
+'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
+// propiedades
+   { maxZoom: 10, // zoom máximo 10
+// Líneas de atribución
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' + '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    id: 'mapbox.streets'
+    }).addTo(mi_mapa);
+
+// Añado un WMS (PNOA)
+var PNOA = L.tileLayer.wms('http://www.idee.es/wms/PNOA/PNOA?', {  //URL WMS
+      layers: 'PNOA',          // capa del WMS
+      format: 'image/png',     // tipo de formato
+      transparent: true,       // activa capa alfa/transparente
+      });
+  PNOA.addTo(mi_mapa);         // añadir capa al mapa
+
+//INCLUIR CONTROLES
+//Primero definimos las variables que van a ir dentro de control layers
+// Hay dos tipos de capas: base (se elige una u otra) y superpuestas (se activan o desactivan)
+  var baseMaps = {                  // variable con apartado de mapas base
+      "OpenStreetMap": OSM,  // elemento a incluir y descripción (entre comillas)
+      "Stamen": stamen_tms,
+      };
+  var overlayMaps = {              // apartado de capas
+      "Ortofoto PNOA": PNOA       // elemento a incluir y descripción
+      };
+  var capas = L.control.layers(   // variable con control de capas
+    baseMaps,                     // añadiendo capas base
+    overlayMaps,                  // añadiendo capas
+    {collapsed:true});            // control NO desplegado
+  capas.addTo(mi_mapa);           // añadimos control de capas al mapa
+
+  var escala = L.control.scale({position: "topleft"} // añado la escala indicando que se ubique arriba a la izquierda
+    )
+    escala.addTo(mi_mapa);
+
+  // Ahora en la esquina superior derecha sale un desplegable en el que se puede seleccionar como base la capa Stamen o la de OpenStreetMap y podemos activar y desactivar el pnoa
+
+//JSON: sistema propio de java script para añadir objetos. El archivo JSON hay que pasarlo a una variable
+
+// añadimos punto (marcador)
+var punto = L.marker(
+    [42.789167, -1.6175], {})
+    punto.addTo(mi_mapa); // se añade al mapa
+    // añadir capa GeoJSON
+    var araprov = L.geoJSON( // crear objeto araprov como capa geojson
+      araprov, {             // código a cargar: `araprov`, que es el ojeto creado con la capa json
+      color: 'red',             // estilo color
+      fillColor: 'blue',        //   color de relleno
+      fillOpacity: 0.2,         //  opacidad de relleno
+      });
+
+    araprov.addTo(mi_mapa)   //
+
+</script> <!-- cierro el script -->
+</body> <!-- cierro el cuerpo -->
+</html> <!-- finalmente cierro el contenido html -->
