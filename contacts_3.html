@@ -29,6 +29,15 @@
     integrity="sha512-3Wcxp7F9bV2pl+MBgrL6Pz7AJASLpemmQPIiPA0lDs3ImF0z4JuuMIBPeirLbgIuhfH2gJyGWZjvm6M+Zr7L6Q=="
     crossorigin=""></script>
 <!-- cargar javascript (objeto GeoJSON transformado) -->
+
+<!-- CSS para incluir iconos en página -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- CSS de sidebar-v2 -->
+    <link rel="stylesheet" href="https://turbo87.github.io/sidebar-v2/css/leaflet-sidebar.css"/>
+
+<!-- JS de sidebar-v2 -->
+    <script src="https://turbo87.github.io/sidebar-v2//js/leaflet-sidebar.js"></script>
 <script src="leaflet/navarra.js"></script>
 
 <!-- Establezco el estilo, mediante clases-->
@@ -80,7 +89,9 @@
       <h1> Email: lamutilhuerta@gmail.com <br> Telefono: 610098925 <br> Instagram: @lamutilhuerta</h1><!--titulo con el estilo de h1-->
        
  <!-- bloque dónde aparecerá el mapa, así como el estilo del mapa -->
+ 
 <div class=mapa id="bloque_mapa" style="width: 800px; height: 800px;"></div>
+
 
 <script> // a partir de ahora se emplea lenguaje de Javascript
 // defino el mapa como una varianble y ajusto dónde quiero que aparezca
@@ -122,8 +133,8 @@ var PNOA = L.tileLayer.wms('http://www.idee.es/wms/PNOA/PNOA?', {  //URL WMS
       transparent: true,       // activa capa alfa/transparente
       attribution: ' <i>Imagen PNOA</i> &copy; IGN'
       });
-  PNOA.addTo(mi_mapa);         // añadir capa al mapa
-
+  //PNOA.addTo(mi_mapa);         // Le pongo doble barra porque quiero que el PNOA solo pueda ser activado desde los controles
+  
 // añadimos punto (marcador)
 var mutil = L.icon({
     iconUrl: 'Images/chincheta.png', //Imagen que quiero usar como chincheta
