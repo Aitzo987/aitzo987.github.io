@@ -4,11 +4,11 @@
 <title>LaMutilhuerta</title>
    <meta charset="utf-8" />
    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   
+   <meta name="viewport" content="width=device-width, initial-scale=1">   
 <!--Enlaces a archivos CSS, definidos por la plantilla-->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="estilos.css">
 <!--Enlace que he creado para visualizar en la pestaña del buscador el logo de la Mutilhuerta-->
     <link rel="icon" type="image/ico" href="Images/logo.ico" sizes="192x192">
 <!-- enlace a código CSS de Leaflet en la cabecera -->
@@ -78,19 +78,26 @@
        </div> <!-- Sirven para crear secciones o agrupar contenidos -->
        <div style="margin-left: 320px;"><br> <!--Establezco un margen de 320 píxeles, para que la imágen y cabecera no se superpongan -->
     </div> 
-
-<body>
+  <!--Formulario de contacto-->
+  <form action="//formspree.io/aitormutilva@hotmail.com"
+  method="POST">
+        <h2>CONTACTO</h2>
+        <!-- El placeholder es una descripción del cuadro de texto -->
+        <input type="text" name="Nombre" placeholder="Nombre" required>
+        <input type="text" name="Correo electrónico" placeholder="Correo electrónico" required> 
+        <textarea name="mensaje" placeholder="Escriba aquí su mensaje"></textarea>
+        <input type="submit" value="ENVIAR" id="button">
+      </form>
 
    <!-- Container donde se explica quienes somos-->
-   <div class="w3-container" id="CONTACTO">
+   <div class="w3-container" id="LOCALIZACION">
     <div class="w3-content" style="max-width:800px">
-      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">CONTACTO </span></h5>
-      <!--El teléfono introducido es inventado Miguel, no te asustes :P-->
-      <h1> Email: lamutilhuerta@gmail.com <br> Telefono: 610098925 <br> Instagram: @lamutilhuerta</h1><!--titulo con el estilo de h1-->
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">LOCALIZACIÓN </span></h5>
       
+  
  <!-- bloque dónde aparecerá el mapa, así como el estilo del mapa -->
  
-<div class=mapa id="bloque_mapa" style="width: 800px; height: 800px;"></div>
+<div class=mapa id="bloque_mapa" style="width: 800px; height: 500px;"></div>
 
 
 <script> // a partir de ahora se emplea lenguaje de Javascript
@@ -178,6 +185,11 @@ L.marker([42.789167, -1.6175], {icon: mutil}).addTo(mi_mapa); //establecemos coo
 
     navarra.addTo(mi_mapa)   //
 
+    
 </script> <!-- cierro el script -->
+
+<br> <!--Salto de página para distanciar el texto del logo de la Mutilhuerta-->
+<br>
+<br>
 </body> <!-- cierro el cuerpo -->
 </html> <!-- finalmente cierro el contenido html -->
