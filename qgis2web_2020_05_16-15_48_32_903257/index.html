@@ -1,0 +1,116 @@
+<html> <!--Abro el texto HTML-->
+  <head><!-- Abro la cabecera del documento -->
+    <!--Defino el título de la pestaña del navegador-->
+      <title>LaMutilhuerta</title>
+    <!--La plantilla proporciona metadatos sobre el documento HTML-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+    <!--Enlace que he creado para visualizar en la pestaña del buscador el logo de la Mutilhuerta-->
+    <link rel="icon" type="image/ico" href="Images/logo.ico" sizes="192x192">
+    
+    <!-- Establezco el estilo, mediante clases-->
+    <style type="text/CSS" title="estilos personales">
+    
+    body, html {
+      height:100%; /* Designamos la altura del espacio donde vamos a colocar la imagen de la portada */
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;} /*Estilo de letra utilizado*/
+    
+    /* Defino la clase "bgimg" */
+    .bgimg {
+      background-position: center; /*Que su posición sea centrada*/
+      background-size: cover; /*Escalo la imagen al mayor tamaño posible sin estirarla*/
+      background-image:url("Images/quepeso.jpg"); /*Especifico la url a la imagen*/
+      min-height: 200%; /*Defino la altura mínima de la imagen*/
+    }
+   /* Defino la clase "h2" */
+    .h2 {
+     background-color:white; /*Color blanco de fondo*/
+     color: black; /*Color de la letra, negro */
+     padding: 10px; /*Establezco 10 píxeles de relleno para los cuatro lados del elemento */
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /*Tipo de letra*/
+     font-size: small; /*Determino que el tamaño de la fuente sea pequeño */
+     text-align: justify} /*Indico que el texto tenga los bordes justificados*/
+    .menu {
+        display: none;
+    }
+
+    </style><!--Cierro el estilo-->
+    
+  </head> <!--Cierro la cabecera del documento--> 
+  <body> <!--Abro el cuerpo, que contiene todos los elementos del HTML-->
+  
+    <!-- Links para la cabecera de la página web -->
+    <div class="w3-row w3-padding w3-black"> <!-- Esta clase define el polígono negro del menú -->
+        <div class="w3-col s3" style="text-align: center;"><a href="index.html"</a> <img src="Images/Botton_hOME.jpg"style="width: 150px; height: 35px;"> </div> <!-- Inserto la imágen del texto de la mutilhuerta y creo un enlace a la página principal, que nos redirija al index.html -->
+        <div class="w3-col s3"> <a href="about_1.html" class="w3-button w3-block w3-black">NOSOTRAS</a> </div> <!-- El botón de quienes somos con el enlace al html about_1.html -->
+        <div class="w3-col s3"> <a href="products_2.html" class="w3-button w3-block w3-black">PRODUCTOS</a></div> <!-- El botón de productos con el enlace al html products_2.html -->
+        <div class="w3-col s3"> <a href="contacts_3.html" class="w3-button w3-block w3-black">CONTACTO</a></div> <!-- El botón de contacto, con el enlace al html products_2.html -->
+        </div> <!-- Sirven para crear secciones o agrupar contenidos -->
+     <div style="margin-left: 320px;"><br> <!--Establezco un margen de 320 píxeles, para que la imágen y cabecera no se superpongan -->
+    </div> 
+    <!-- Para insertar la imagen y el título de la portada -->
+    <header class="bgimg w3-display-container w3-grayscale-min" id="home" style="margin-top: -23px;">
+      <div class="w3-display-middle w3-center" style="top: 429px; height: 762px; left: 737px; width: 706px; text-align: center;">
+      </div>
+    </header>
+    <!--El encabezamiento acaba aquí--> <br>
+    <!--Salto de línea--> <br>
+    <!--Salto de línea-->
+    <!-- CUENTA ATRÁS PARA LA MUTILHUERTA 2.0-->
+    <!--Color verde para la fuente--> 
+    <center><span style="color: darkgreen;"><span><b>LA</b> <b>MUTILHUERTA
+    2.0</b></span></span></center>
+    <center><span style="color: black;"></span><!--Color negro y estilo de la clase h2-->
+    <!--Lenguaje Java para la elaboración de la cuenta atrás-->
+    <!--En primer lugar defino la apariencia del elemento-->
+      <script language="JavaScript" type="text/javascript">
+      
+      //<![CDATA[
+      
+      TargetDate = "06/30/2020 09:10 PM";
+      
+      BackColor = "white"; /*Color del fondo, blanco*/
+      
+      ForeColor =  "black";/*Color de la letra, negro*/
+      
+      CountActive = true; /*Activar la cuenta atrás*/
+      
+      CountStepper = -1;/*Que se produzca de uno en un segundo*/
+      
+      LeadingZero = true;/*El cero a la izquierda*/
+      
+      DisplayFormat = "%%D%% Días, %%H%% Horas, %%M%% Minutos, %%S%% Segundos.";/*Establezco el formato de la cuenta atrás*/
+      
+      //]]>
+
+      </script>
+      <!--Cierro el script-->
+      <!--Fuente de donde se encuentra el script utilizado para la cuenta atrás-->
+      <script language="JavaScript" src="https://scripts.hashemian.com/js/countdown.js"
+
+type="text/javascript">
+       </script>
+      <!--span sirve para aplicar estilo al texto-->
+      <!-- Instagram (redes sociales) --> 
+      <br><!--Salto de línea-->
+      <br>
+      <br>
+      <br>
+      <br>
+      <footer class="w3-container w3-padding-64 w3-white w3-center w3-large" style="margin-top: -14px;">
+        <!--Inserto el enlace del instagram de La Mutilhuerta-->
+        <p>Descúbrenos <a href="https://www.instagram.com/lamutilhuerta/?hl=es"
+
+            target="_blank" class="w3-hover-text-green">AQUÍ</a></p>
+        <!--Lograr un sombreado verde cuando situas el ratón encima del enlace-->
+        <br> <!--Salto de página para distanciar el texto del logo de la Mutilhuerta-->
+        <img src="Images/logo.ico" style="width: 115px; height: 116px;"> </footer><!--Inserto el logo de la Mutilhuerta--> </center>
+  <!--Contador de visitas-->
+      <div id="sfcmaacqrua3cud1fqjzjhfpar93lr5u68e"></div>
+<script type="text/javascript" src="https://counter4.stat.ovh/private/counter.js?c=maacqrua3cud1fqjzjhfpar93lr5u68e&down=async" async></script>
+
+  </body><!--El cuerpo del documento termina aquí-->
+</html> <!--El html termina aquí-->

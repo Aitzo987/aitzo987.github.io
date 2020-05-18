@@ -48,7 +48,7 @@ textarea {
 /*Lo que esta dentro se realice siempre y cuando el ancho máximo sea de 480 píxeles*/
 @media (max-width:480px) {
     form{
-        width:100px;
+        width:200px;
     }
 }
 
