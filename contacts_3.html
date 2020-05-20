@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html> <!--Abro el texto HTML-->
-<head><!-- Abro la cabecera ddocumento -->
-<title>LaMutilhuerta</title>
+<head><!-- Abro la cabecera documento -->
+<title>LaMutilhuerta</title><!--Título de la página-->
    <meta charset="utf-8" />
    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">   
@@ -63,12 +63,11 @@
      font-size: small; /*Determino que el tamaño de la fuente sea pequeño */
      text-align: justify} /*Indico que el texto tenga los bordes justificados*/
 
-    </style>
-    <!--Cierro el estilo-->
+    </style><!--Cierro el estilo-->
   </head> <!--Cierro la cabecera del documento--> 
   <body> <!--Abro el cuerpo, que contiene todos los elementos del HTML-->
   
-    <!-- Links para la cabecera de la página web -->
+  <!-- Links para la cabecera de la página web -->
   
     <div class="w3-row w3-padding w3-black"> <!-- Esta clase define el polígono negro del menú -->
       <div class="w3-col s3" style="text-align: center;"><a href="index.html"</a> <img src="Images/Botton_hOME.jpg"style="width: 150px; height: 35px;"> </div> <!-- Inserto la imágen del texto de la mutilhuerta y creo un enlace a la página principal, que nos redirija al index.html -->
@@ -79,36 +78,31 @@
        <div style="margin-left: 320px;"><br> <!--Establezco un margen de 320 píxeles, para que la imágen y cabecera no se superpongan -->
     </div> 
   <!--Formulario de contacto-->
-  <form action="//formspree.io/lamutilhuerta@gmail.com"
+  <!--He conseguido que el formulario de contacto funcione con la action=//formspree.io jeje-->
+  <!--No es un correo que utilice, para no exponerme demasiado. Puedes hacer la prueba:P-->
+  <form action="//formspree.io/lamutilhuerta@gmail.com" 
   method="POST">
         <h2>CONTACTO</h2>
-        <!-- El placeholder es una descripción del cuadro de texto -->
         <input type="text" name="Nombre" placeholder="Nombre" required>
         <input type="text" name="Correo electrónico" placeholder="Correo electrónico" required> 
-        <textarea name="mensaje" placeholder="Escriba aquí su mensaje"></textarea>
-        <input type="submit" value="ENVIAR" id="button">
+        <textarea name="mensaje" placeholder="Escriba aquí su mensaje"></textarea> <!-- El placeholder es una descripción del cuadro de texto -->
+        <input type="submit" value="ENVIAR" id="button"> <!--input tipo submit para enviar el mensaje-->
       </form>
-
-   <!-- Container donde se explica quienes somos-->
+<!-- Container donde para introducir el mapa básico de localización-->
    <div class="w3-container" id="LOCALIZACION">
     <div class="w3-content" style="max-width:800px">
       <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">LOCALIZACIÓN </span></h5>
-      
-  
- <!-- bloque dónde aparecerá el mapa, así como el estilo del mapa -->
- 
-<div class=mapa id="bloque_mapa" style="width: 800px; height: 450px;"></div>
-
+<!-- bloque dónde aparecerá el mapa, así como el estilo del mapa -->
+<div class=mapa id="bloque_mapa" style="width: 800px; height: 450px;"></div> <!--Determino el tamaño del visor-->
 
 <script> // a partir de ahora se emplea lenguaje de Javascript
 // defino el mapa como una varianble y ajusto dónde quiero que aparezca
 var mi_mapa = L.map('bloque_mapa').setView([42.81, -1.64], 5); // L.map es la función que permite crear y manipular el mapa. Set view: coordenadas de mi mapa y nivel de zoom.
 
-
 // A continuación añado un mapa base. Crear un tile layer lleva implícito establecer la URL, el texto con la atribución y el máximo nivel de zoom de la capa
 //Añado un mapa base con estilo de acuarela
 var Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', { // dirección de las tiles
-	// Líneas de atribución-IMPORTANTE
+// Líneas de atribución-IMPORTANTE
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 	subdomains: 'abcd',
 	minZoom: 1, //zoom mínimo de 1
@@ -172,7 +166,7 @@ L.marker([42.789167, -1.6175], {icon: mutil}).addTo(mi_mapa); //establecemos coo
     )
     escala.addTo(mi_mapa);
 
-  // Ahora en la esquina superior derecha sale un desplegable en el que se puede seleccionar como base la capa Stamen o la de OpenStreetMap y podemos activar y desactivar el pnoa
+// Ahora en la esquina superior derecha sale un desplegable en el que se puede seleccionar como base la capa Stamen o la de OpenStreetMap y podemos activar y desactivar el pnoa
 
 //JSON: sistema propio de java script para añadir objetos. El archivo JSON hay que pasarlo a una variable
 // añadir capa GeoJSON

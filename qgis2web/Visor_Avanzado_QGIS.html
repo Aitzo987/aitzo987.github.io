@@ -75,7 +75,7 @@
        <div id="map"><!-- se crea un elemento, que será el espacio done se visualizará el mapa -->
        </div>
        <!-- A continuación comienza la parte de Javascript-->
-       <!-- elementos que se utilizan para la creación del mapa -->
+       <!-- Elementos que se utilizan para la creación del mapa -->
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
@@ -92,8 +92,8 @@
         <script src="data/MUNICIPIOS_2.js"></script>
         <script src="data/shp_actividades_economicas_3.js"></script>
         <script>
-        var highlightLayer;// funcion para que al pasar el ratón por un punto éste se destaque poniendose en amarillo (ffff00)
-        // esta función se aplica a cada capa de la manera "pop_nombre de la capa (feature, layer) e indicando ciertos parámetros
+        var highlightLayer;// Funcion para que al pasar el ratón por un punto éste se destaque poniendose en amarillo (ffff00)
+        // Esta función se aplica a cada capa de la manera "pop_nombre de la capa (feature, layer) e indicando ciertos parámetros
         function highlightFeature(e) {
             highlightLayer = e.target;
 
@@ -109,9 +109,9 @@
             }
             highlightLayer.openPopup();
         }
-        var map = L.map('map', { // se define el mapa como una variable y se indican los niveles de zoom
-            zoomControl:true, maxZoom:10, minZoom:7 // se modifican los niveles respecto a los originales para que el zoom como mínimo sea de 8
-        }).setView([41.397, -0.677],7); //modifico el setview para que se aprecie la comunidad de Aragón centrada en el visor
+        var map = L.map('map', { //Se define el mapa como una variable y se indican los niveles de zoom
+            zoomControl:true, maxZoom:10, minZoom:7 //Se modifican los niveles respecto a los originales para que el zoom como mínimo sea de 8
+        }).setView([41.397, -0.677],7); //Modifico el setview para que se aprecie la comunidad de Aragón centrada en el visor
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
@@ -202,7 +202,7 @@
             });
             //Como sólo me interesa observar los popups referentes a la comunidad de Aragón, elimino también el de las CCAA. 
         }
-        //En la capa de CCAA_limitrofes establecemos opacidad de relleno, para destacar la comunidad de Aragón. 
+        //En la capa de CCAA_limitrofes establecemos opacidad de relleno, para destacar la comunidad de Aragón y que se transparente la imagen de fondo establecida en la página.
         function style_CCAALIMITROFES_1_0() {
             return {
                 pane: 'pane_CCAALIMITROFES_1',
@@ -257,7 +257,7 @@
             return {
                 pane: 'pane_MUNICIPIOS_2',
                 opacity: 1,
-                color: 'rgba(20,20,20,0.1)', //cambio el color del borde para suavizarlo 
+                color: 'rgba(100,100,100,0.3)', //cambio el color y le asigno transparencia para que no tenga mucho peso visual
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
@@ -317,7 +317,7 @@
                 pane: 'pane_shp_actividades_economicas_3',
                 radius: 2.0,
                 opacity: 1,
-                color: 'rgba(100,100,100,0.4)', 
+                color: 'rgba(100,100,100,0.4)', //Como estas circunferencias son muy pequeñas, le pongo un contorno gris para que se aprecien con más claridad. El blanco entorpecía su visualización al tratarse de un color muy claro. 
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
@@ -414,7 +414,7 @@
         bounds_group.addLayer(layer_shp_actividades_economicas_3);
         map.addLayer(layer_shp_actividades_economicas_3);
         var baseMaps = {};
-    // se añade el control de las capas, la escala y la leyenda. Se modifica la leyenda para que no aparezca la capa de las CCAA_limitrofes ni los PAISES_EUROPA_LIMITROFES y la escala para que sea vea también en formato "collapsed"
+        // Se añade el control de las capas, la escala y la leyenda. Se modifica la leyenda para que no aparezca la capa de las CCAA_limitrofes ni los PAISES_EUROPA_LIMITROFES y la escala para que sea vea también en formato "collapsed"
         L.control.layers(baseMaps,{'Agricultura ecológica (ha)<br /><table><tr><td style="text-align: center;"><img src="legend/shp_actividades_economicas_3_100.png" /></td><td><10</td></tr><tr><td style="text-align: center;"><img src="legend/shp_actividades_economicas_3_10501.png" /></td><td>10 - 50 </td></tr><tr><td style="text-align: center;"><img src="legend/shp_actividades_economicas_3_501002.png" /></td><td>50 - 100 </td></tr><tr><td style="text-align: center;"><img src="legend/shp_actividades_economicas_3_1002503.png" /></td><td>100 - 250 </td></tr><tr><td style="text-align: center;"><img src="legend/shp_actividades_economicas_3_2504.png" /></td><td>>250 </td></tr></table>': layer_shp_actividades_economicas_3,'<img src="legend/MUNICIPIOS_2.png" /> MUNICIPIOS': layer_MUNICIPIOS_2,}).addTo(map);L.control.scale({position: 'bottomleft', maxWidth: 100, metric: true, imperial: false, updateWhenIdle: false}).addTo(map);
         setBounds();
         map.addControl(new L.Control.Search({
