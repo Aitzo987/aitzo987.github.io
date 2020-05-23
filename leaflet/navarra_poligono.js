@@ -1,4 +1,4 @@
-var navarra = {
+var navarra_poligono = {
 "type": "FeatureCollection",
 "name": "Navarra",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4258" } },
